@@ -1,0 +1,1373 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard | Velzon - Admin & Dashboard Templets</title>
+
+  <!--Map Resources-->
+  <script src="https://cdn.amcharts.com/lib/5/index.js"></script>
+  <script src="https://cdn.amcharts.com/lib/5/percent.js"></script>
+  <script src="https://cdn.amcharts.com/lib/5/map.js"></script>
+  <script src="https://cdn.amcharts.com/lib/5/geodata/continentsLow.js"></script>
+  <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
+
+  <!-- Favicon -->
+  <link rel="icon" href="asset/images/favicon.ico" />
+
+  <!-- FontAwesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+
+  <!-- RemixIcon CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css" />
+
+  <!-- Font -->
+  <link rel="stylesheet" href="asset/fonts/stylesheet.css" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="asset/css/style.css" />
+  <!-- media css  -->
+  <link rel="stylesheet" href="asset/css/media.css">
+</head>
+
+<body>
+  <!-- Header-Start -->
+  <header class="topbar">
+    <div class="navbar-header d-flex justify-between align-center">
+      <div class="search d-flex align-center">
+        <i class="fa-solid fa-bars-staggered search-bar"></i>
+        <i class="fa-solid fa-bars"></i>
+        <div class="search-hide">
+          <input type="search" placeholder="Search..." />
+          <span class="search-icon fa-solid fa-magnifying-glass"></span>
+        </div>
+      </div>
+      <div class="d-flex">
+        <ul class="header-icons d-flex f-wrap align-center">
+          <li>
+            <a href="javascript:void(0);"><img src="asset/images/us.svg" alt="" />
+            </a>
+          </li>
+          <li>
+            <a href="javascript:void(0);"><i class="ri-layout-grid-fill"></i></a>
+          </li>
+          <li>
+            <a href="javascript:void(0);"><i class="ri-shopping-bag-line"></i></a>
+          </li>
+          <li>
+            <a href="javascript:void(0);"><i class="ri-fullscreen-line" id="full"></i></a>
+          </li>
+          <li id="moon">
+            <a href="javascript:void(0);"><i class="ri-moon-line"></i></a>
+            <a href="javascript:void(0);"><i class="ri-sun-line d-none"></i></a>
+          </li>
+          <li>
+            <a href="javascript:void(0);"><i class="fa-regular fa-bell"></i></a>
+          </li>
+        </ul>
+        <div class="profile d-flex align-center">
+          <div class="p-info">
+            <span class="d-flex align-center">
+              <img src="asset/images/founder.jpg" alt="" />
+              <span class="p-text">
+                <span class="user-name">Anna Adame</span>
+                <span class="user-sub-name">Founder</span>
+                <span></span>
+              </span>
+            </span>
+          </div>
+          <div class="dropdown-menu">
+            <h6 class="d-heading">Welcome Anna!</h6>
+            <a class="d-item">
+              <i class="ri-account-circle-fill"></i>
+              <span class="d-item-name">Profile</span>
+            </a>
+            <a class="d-item">
+              <i class="ri-message-2-line"></i>
+              <span class="d-item-name">Message</span>
+            </a>
+            <a class="d-item">
+              <i class="ri-calendar-check-fill"></i>
+              <span class="d-item-name">Taskboard</span>
+            </a>
+            <a class="d-item">
+              <i class="ri-lifebuoy-line"></i>
+              <span class="d-item-name">Help</span>
+            </a>
+            <div class="d-divider"></div>
+            <a class="d-item">
+              <i class="ri-wallet-3-fill"></i>
+              <span class="d-item-name">Balance :<b>$5971.67</b></span>
+            </a>
+            <a class="d-item">
+              <span class="badge">New</span>
+              <i class="ri-settings-4-line"></i>
+              <span class="d-item-name">Settings</span>
+            </a>
+            <a class="d-item">
+              <i class="ri-lock-fill"></i>
+              <span class="d-item-name">Lock Screen</span>
+            </a>
+            <a href="login.html" class="d-item">
+              <i class="ri-logout-box-r-line"></i>
+              <span class="d-item-name">Logout</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- Aside-Start -->
+  <aside>
+    <div class="navbar-box text-center">
+      <a href="index.html" class="logo"><img src="asset/images/logo.png" alt="logo" id="home-btn" /></a>
+    </div>
+    <div class="menu">
+      <ul>
+        <li class="menu-title">
+          <span class="t-menu">Menu</span>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link arrow d-flex align-center">
+            <i class="ri-dashboard-2-line"></i>
+            <span class="f-grow-1">Dashboard</span>
+            <i class="ri-arrow-right-s-line text-right "></i>
+          </a>
+          <div class="menu-dropdown">
+            <ul class="nav d-flex f-wrap f-col">
+              <li class="nav-item">
+                <a href="" class="nav-link d-flex align-center">Analytics</a>
+              </li>
+              <li class="nav-item">
+                <a href="" class="nav-link d-flex align-center">CRM</a>
+              </li>
+              <li class="nav-item">
+                <a href="" class="nav-link d-flex align-center">Ecommerce</a>
+              </li>
+              <li class="nav-item">
+                <a href="" class="nav-link d-flex align-center">Crypto</a>
+              </li>
+              <li class="nav-item">
+                <a href="" class="nav-link d-flex align-center">Projects</a>
+              </li>
+              <li class="nav-item">
+                <a href="" class="nav-link d-flex align-center">NFT</a>
+              </li>
+              <li class="nav-item">
+                <a href="" class="nav-link d-flex align-center">Job</a>
+              </li>
+            </ul>
+          </div>
+        </li>
+
+        <li class="nav-item">
+          <a href="#" class="nav-link arrow d-flex align-center">
+            <i class="ri-apps-line"></i>
+            <span class="f-grow-1">Apps</span>
+            <i class="ri-arrow-right-s-line text-right "></i>
+          </a>
+          <div class="menu-dropdown">
+            <ul class="nav d-flex f-wrap f-col">
+              <li class="nav-item">
+                <a href="" class="nav-link d-flex align-center">Calender</a>
+              </li>
+              <li class="nav-item">
+                <a href="" class="nav-link d-flex align-center">Chart</a>
+              </li>
+              <li class="nav-item">
+                <a href="" class="nav-link d-flex align-center">Email</a>
+              </li>
+              <li class="nav-item">
+                <a href="" class="nav-link d-flex align-center">Ecommerce</a>
+              </li>
+              <li class="nav-item">
+                <a href="" class="nav-link d-flex align-center">Projects</a>
+              </li>
+              <li class="nav-item">
+                <a href="" class="nav-link d-flex align-center">Charts</a>
+              </li>
+              <li class="nav-item">
+                <a href="" class="nav-link d-flex align-center">CRM</a>
+              </li>
+              <li class="nav-item">
+                <a href="" class="nav-link d-flex align-center">Crypto</a>
+              </li>
+              <li class="nav-item">
+                <a href="" class="nav-link d-flex align-center">Invoices</a>
+              </li>
+              <li class="nav-item">
+                <a href="" class="nav-link d-flex align-center">Support Tickets</a>
+              </li>
+              <li class="nav-item">
+                <a href="" class="nav-link d-flex align-center">NFT MarketPlace</a>
+              </li>
+              <li class="nav-item">
+                <a href="" class="nav-link d-flex align-center">File Manager</a>
+              </li>
+              <li class="nav-item">
+                <a href="" class="nav-link d-flex align-center">To Do</a>
+              </li>
+              <li class="nav-item">
+                <a href="" class="nav-link d-flex align-center">Jobs</a>
+              </li>
+              <li class="nav-item"> 
+                <a href="" class="nav-link d-flex align-center">API Key</a>
+              </li>
+            </ul>
+          </div>
+        </li>
+
+        <li class="nav-item">
+          <a href="#" class="nav-link arrow d-flex align-center">
+            <i class="ri-layout-3-line"></i>
+            <span class="f-grow-1">Layout</span>
+            <i class="ri-arrow-right-s-line text-right "></i>
+          </a>
+          <div class="menu-dropdown">
+            <ul class="nav d-flex f-wrap f-col">
+              <li class="nav-item">
+                <a href="" class="nav-link d-flex align-center">Horizontal</a>
+              </li>
+              <li class="nav-item">
+                <a href="" class="nav-link d-flex align-center">Detached</a>
+              </li>
+              <li class="nav-item">
+                <a href="" class="nav-link d-flex align-center">Two Column</a>
+              </li>
+              <li class="nav-item">
+                <a href="" class="nav-link d-flex align-center">Hovered</a>
+              </li>
+            </ul>
+          </div>
+        </li>
+
+        <li class="menu-title">
+          <span class="t-menu">Pages</span>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link arrow d-flex align-center">
+            <i class="ri-account-circle-line"></i>
+            <span class="f-grow-1">Authentication</span>
+            <i class="ri-arrow-right-s-line text-right "></i>
+          </a>
+          <div class="menu-dropdown">
+            <ul class="nav d-flex f-wrap f-col">
+              <li class="nav-item">
+                <a href="" class="nav-link d-flex align-center">Sign In</a>
+              </li>
+              <li class="nav-item">
+                <a href="" class="nav-link d-flex align-center">Sign Up</a>
+              </li>
+              <li class="nav-item">
+                <a href="" class="nav-link d-flex align-center">Password Reset</a>
+              </li>
+              <li class="nav-item">
+                <a href="" class="nav-link d-flex align-center">Password Create</a>
+              </li>
+              <li class="nav-item">
+                <a href="" class="nav-link d-flex align-center">Lock Screen</a>
+              </li>
+              <li class="nav-item">
+                <a href="" class="nav-link d-flex align-center">Log Out</a>
+              </li>
+              <li class="nav-item">
+                <a href="" class="nav-link d-flex align-center">Success Message</a>
+              </li>
+              <li class="nav-item">
+                <a href="" class="nav-link d-flex align-center">Two-Step Verification</a>
+              </li>
+              <li class="nav-item">
+                <a href="" class="nav-link d-flex align-center">Errors</a>
+              </li>
+            </ul>
+          </div>
+        </li>
+
+        <li class="nav-item">
+          <a href="#" class="nav-link arrow d-flex align-center">
+            <i class="ri-pages-line"></i>
+            <span class="f-grow-1">Pages</span>
+            <i class="ri-arrow-right-s-line text-right "></i>
+          </a>
+          <div class="menu-dropdown">
+            <ul class="nav d-flex f-wrap f-col">
+              <li class="nav-item">
+                <a href="" class="nav-link d-flex align-center">Starter</a>
+              </li>
+              <li class="nav-item">
+                <a href="" class="nav-link d-flex align-center">Profile</a>
+              </li>
+              <li class="nav-item">
+                <a href="" class="nav-link d-flex align-center">Team</a>
+              </li>
+              <li class="nav-item">
+                <a href="" class="nav-link d-flex align-center">Timeline</a>
+              </li>
+              <li class="nav-item">
+                <a href="" class="nav-link d-flex align-center">FAQs</a>
+              </li>
+              <li class="nav-item">
+                <a href="" class="nav-link d-flex align-center">Pricing</a>
+              </li>
+              <li class="nav-item">
+                <a href="" class="nav-link d-flex align-center">Gallery</a>
+              </li>
+              <li class="nav-item">
+                <a href="" class="nav-link d-flex align-center">Maintainance</a>
+              </li>
+              <li class="nav-item">
+                <a href="" class="nav-link d-flex align-center">Coming Soon</a>
+              </li>
+              <li class="nav-item">
+                <a href="" class="nav-link d-flex align-center">Site Map</a>
+              </li>
+              <li class="nav-item">
+                <a href="" class="nav-link d-flex align-center">Search Results</a>
+              </li>
+              <li class="nav-item">
+                <a href="" class="nav-link d-flex align-center">Privacy Policy</a>
+              </li>
+              <li class="nav-item">
+                <a href="" class="nav-link d-flex align-center">Terms And Conditions</a>
+              </li>
+            </ul>
+          </div>
+        </li>
+
+        <li class="nav-item">
+          <a href="#" class="nav-link arrow d-flex align-center">
+            <i class="ri-layout-3-line"></i>
+            <span class="f-grow-1">Landing</span>
+            <i class="ri-arrow-right-s-line text-right "></i>
+          </a>
+          <div class="menu-dropdown">
+            <ul class="nav d-flex f-wrap f-col">
+              <li class="nav-item">
+                <a href="" class="nav-link d-flex align-center">One Page</a>
+              </li>
+              <li class="nav-item">
+                <a href="" class="nav-link d-flex align-center">NFT LAnding</a>
+              </li>
+              <li class="nav-item">
+                <a href="" class="nav-link d-flex align-center">Job</a>
+              </li>
+            </ul>
+          </div>
+        </li>
+
+        <li class="menu-title">
+          <span class="t-menu">Components</span>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link arrow d-flex align-center">
+            <i class="ri-pencil-ruler-2-line"></i>
+            <span class="f-grow-1">Base UI</span>
+            <i class="ri-arrow-right-s-line text-right "></i>
+          </a>
+          <div class="menu-dropdown">
+            <ul class="nav d-flex f-wrap f-col">
+              <li class="nav-item">
+                <a href="" class="nav-link d-flex align-center">Alerts</a>
+              </li>
+              <li class="nav-item">
+                <a href="" class="nav-link d-flex align-center">Badges</a>
+              </li>
+              <li class="nav-item">
+                <a href="" class="nav-link d-flex align-center">Buttons</a>
+              </li>
+              <li class="nav-item">
+                <a href="" class="nav-link d-flex align-center">Colors</a>
+              </li>
+              <li class="nav-item">
+                <a href="" class="nav-link d-flex align-center">Cards</a>
+              </li>
+              <li class="nav-item">
+                <a href="" class="nav-link d-flex align-center">Carousel</a>
+              </li>
+              <li class="nav-item">
+                <a href="" class="nav-link d-flex align-center">Dropdowns</a>
+              </li>
+              <li class="nav-item">
+                <a href="" class="nav-link d-flex align-center">Grid</a>
+              </li>
+              <li class="nav-item">
+                <a href="" class="nav-link d-flex align-center">Images</a>
+              </li>
+              <li class="nav-item">
+                <a href="" class="nav-link d-flex align-center">Tabs</a>
+              </li>
+              <li class="nav-item">
+                <a href="" class="nav-link d-flex align-center">Accordian & Collapse</a>
+              </li>
+              <li class="nav-item">
+                <a href="" class="nav-link d-flex align-center">Modals</a>
+              </li>
+              <li class="nav-item">
+                <a href="" class="nav-link d-flex align-center">Offcanvas</a>
+              </li>
+              <li class="nav-item">
+                <a href="" class="nav-link d-flex align-center">Placeholders</a>
+              </li>
+              <li class="nav-item">
+                <a href="" class="nav-link d-flex align-center">Progress</a>
+              </li>
+              <li class="nav-item">
+                <a href="" class="nav-link d-flex align-center">Notifications</a>
+              </li>
+              <li class="nav-item">
+                <a href="" class="nav-link d-flex align-center">Media Object</a>
+              </li>
+              <li class="nav-item">
+                <a href="" class="nav-link d-flex align-center">Embed Video</a>
+              </li>
+              <li class="nav-item">
+                <a href="" class="nav-link d-flex align-center">Typography</a>
+              </li>
+              <li class="nav-item">
+                <a href="" class="nav-link d-flex align-center">Lists</a>
+              </li>
+              <li class="nav-item">
+                <a href="" class="nav-link d-flex align-center">Links</a>
+              </li>
+              <li class="nav-item">
+                <a href="" class="nav-link d-flex align-center">General</a>
+              </li>
+              <li class="nav-item">
+                <a href="" class="nav-link d-flex align-center">Ribbons</a>
+              </li>
+              <li class="nav-item">
+                <a href="" class="nav-link d-flex align-center">Utility</a>
+              </li>
+            </ul>
+          </div>
+        </li>
+
+        <li class="nav-item">
+          <a href="" class="nav-link arrow d-flex align-center">
+            <i class="ri-stack-line"></i>
+            <span class="f-grow-1">Advance UI</span>
+            <i class="ri-arrow-right-s-line text-right "></i>
+          </a>
+          <div class="menu-dropdown">
+            <ul class="nav d-flex f-wrap f-col">
+              <li class="nav-item">
+                <a href="" class="nav-link d-flex align-center">Sweet Alerts</a>
+              </li>
+              <li class="nav-item">
+                <a href="" class="nav-link d-flex align-center">Nestable List</a>
+              </li>
+              <li class="nav-item">
+                <a href="" class="nav-link d-flex align-center">Scrollbar</a>
+              </li>
+              <li class="nav-item">
+                <a href="" class="nav-link d-flex align-center">Animation</a>
+              </li>
+              <li class="nav-item">
+                <a href="" class="nav-link d-flex align-center">Tour</a>
+              </li>
+              <li class="nav-item">
+                <a href="" class="nav-link d-flex align-center">Swiper Slider</a>
+              </li>
+              <li class="nav-item">
+                <a href="" class="nav-link d-flex align-center">Ratings</a>
+              </li>
+              <li class="nav-item">
+                <a href="" class="nav-link d-flex align-center">Hisghlights</a>
+              </li>
+              <li class="nav-item">
+                <a href="" class="nav-link d-flex align-center">ScrollSpy</a>
+              </li>
+            </ul>
+          </div>
+        </li>
+
+        <li class="nav-item">
+          <a href="#" class="nav-link arrow  d-flex align-center">
+            <i class="ri-file-list-3-line"> </i>
+            <span class="f-grow-1">Forms</span>
+            <i class="ri-arrow-right-s-line text-right "></i>
+          </a>
+          <div class="menu-dropdown">
+            <ul class="nav d-flex f-wrap f-col">
+              <li class="nav-item">
+                <a href="" class="nav-link d-flex align-center">Basic Elements</a>
+              </li>
+              <li class="nav-item">
+                <a href="" class="nav-link d-flex align-center">Form Select</a>
+              </li>
+              <li class="nav-item">
+                <a href="" class="nav-link d-flex align-center">Checkboxs & Radios</a>
+              </li>
+              <li class="nav-item">
+                <a href="" class="nav-link d-flex align-center">Pickers</a>
+              </li>
+              <li class="nav-item">
+                <a href="" class="nav-link d-flex align-center">Input Masks</a>
+              </li>
+              <li class="nav-item">
+                <a href="" class="nav-link d-flex align-center">Advanced</a>
+              </li>
+              <li class="nav-item">
+                <a href="" class="nav-link d-flex align-center">Range Sliders</a>
+              </li>
+              <li class="nav-item">
+                <a href="" class="nav-link d-flex align-center">Validations</a>
+              </li>
+              <li class="nav-item">
+                <a href="" class="nav-link d-flex align-center">Wizards</a>
+              </li>
+              <li class="nav-item">
+                <a href="" class="nav-link d-flex align-center">Editors</a>
+              </li>
+              <li class="nav-item">
+                <a href="" class="nav-link d-flex align-center">File Updates</a>
+              </li>
+              <li class="nav-item">
+                <a href="" class="nav-link d-flex align-center">Form Layouts</a>
+              </li>
+              <li class="nav-item">
+                <a href="" class="nav-link d-flex align-center">Select2</a>
+              </li>
+            </ul>
+          </div>
+        </li>
+
+        <li class="nav-item">
+          <a href="#" class="nav-link arrow d-flex align-center">
+            <i class="ri-layout-grid-line"></i>
+            <span class="f-grow-1">Tables</span>
+            <i class="ri-arrow-right-s-line text-right "></i>
+          </a>
+          <div class="menu-dropdown">
+            <ul class="nav d-flex f-wrap f-col">
+              <li class="nav-item">
+                <a href="" class="nav-link d-flex align-center">Basic Tables</a>
+              </li>
+              <li class="nav-item">
+                <a href="" class="nav-link d-flex align-center">Grid JS</a>
+              </li>
+              <li class="nav-item">
+                <a href="" class="nav-link d-flex align-center">List JS</a>
+              </li>
+              <li class="nav-item">
+                <a href="" class="nav-link d-flex align-center">Datatables</a>
+              </li>
+            </ul>
+          </div>
+        </li>
+
+        <li class="nav-item">
+          <a href="#" class="nav-link arrow d-flex align-center">
+            <i class="ri-pie-chart-line"></i>
+            <span class="f-grow-1">Charts</span>
+            <i class="ri-arrow-right-s-line text-right "></i>
+          </a>
+          <div class="menu-dropdown">
+            <ul class="nav d-flex f-wrap f-col">
+              <li class="nav-item">
+                <a href="" class="nav-link d-flex align-center">Apexcharts</a>
+              </li>
+              <li class="nav-item">
+                <a href="" class="nav-link d-flex align-center">Chartjs</a>
+              </li>
+              <li class="nav-item">
+                <a href="" class="nav-link d-flex align-center">Echarts</a>
+              </li>
+            </ul>
+          </div>
+        </li>
+
+        <li class="nav-item">
+          <a href="#" class="nav-link arrow d-flex align-center">
+            <i class="ri-compasses-2-line"></i>
+            <span class="f-grow-1">Icons</span>
+            <i class="ri-arrow-right-s-line text-right "></i>
+          </a>
+          <div class="menu-dropdown">
+            <ul class="nav d-flex f-wrap f-col">
+              <li class="nav-item">
+                <a href="" class="nav-link d-flex align-center">Remix</a>
+              </li>
+              <li class="nav-item">
+                <a href="" class="nav-link d-flex align-center">Boxicons</a>
+              </li>
+              <li class="nav-item">
+                <a href="" class="nav-link d-flex align-center">MAterial Design</a>
+              </li>
+              <li class="nav-item">
+                <a href="" class="nav-link d-flex align-center">Line Awesome</a>
+              </li>
+              <li class="nav-item">
+                <a href="" class="nav-link d-flex align-center">Feather</a>
+              </li>
+              <li class="nav-item">
+                <a href="" class="nav-link d-flex align-center">Crypto SVG</a>
+              </li>
+            </ul>
+          </div>
+        </li>
+
+        <li class="nav-item">
+          <a href="#" class="nav-link arrow d-flex align-center">
+            <i class="ri-map-pin-line"></i>
+            <span class="f-grow-1">Maps</span>
+            <i class="ri-arrow-right-s-line text-right "></i>
+          </a>
+          <div class="menu-dropdown">
+            <ul class="nav d-flex f-wrap f-col">
+              <li class="nav-item">
+                <a href="" class="nav-link d-flex align-center">Google</a>
+              </li>
+              <li class="nav-item">
+                <a href="" class="nav-link d-flex align-center">Vector</a>
+              </li>
+              <li class="nav-item">
+                <a href="" class="nav-link d-flex align-center">Leaflet</a>
+              </li>
+            </ul>
+          </div>
+        </li>
+
+        <li class="nav-item">
+          <a href="#" class="nav-link arrow d-flex align-center">
+            <i class="ri-share-line"></i>
+            <span class="f-grow-1">Multi Level</span>
+            <i class="ri-arrow-right-s-line text-right "></i>
+          </a>
+          <div class="menu-dropdown">
+            <ul class="nav d-flex f-wrap f-col">
+              <li class="nav-item">
+                <a href="" class="nav-link d-flex align-center">Level 1.1</a>
+              </li>
+              <li class="nav-item">
+                <a href="" class="nav-link d-flex align-center">Level 1.2</a>
+              </li>
+            </ul>
+          </div>
+        </li>
+
+        </li>
+      </ul>
+    </div>
+  </aside>
+
+  <!-- Main-Body -->
+  <section class="main-banner">
+    <div class="main-banner-header d-flex f-wrap">
+      <div class="welcome">
+        <h4 class="welcome_heading">Good Morning, Anna!</h4>
+        <p class="welcome_dsc">
+          Here's what's happening with your store today.
+        </p>
+      </div>
+      <div class="calendar d-flex f-wrap justify-between">
+        <input type="text" class="calendar_date" placeholder="01 Jan, 2023 to 31 Jan, 2023" />
+        <div class="calendar_icon">
+          <i class="ri-calendar-2-line"></i>
+        </div>
+        <div class="add_products">
+          <button class="p_btn">
+            <i class="ri-add-circle-line"></i>Add Products
+          </button>
+        </div>
+        <div class="rate">
+          <button class="r_btn"><i class="ri-pulse-line"></i></button>
+        </div>
+      </div>
+    </div>
+    <!-- total eaRNING  -->
+    <div class="products">
+      <div class="pro_dsc">
+        <div class="d-flex">
+          <div class="earnings">
+            <p>Total Earnings</p>
+          </div>
+          <div class="pro_icon_1">
+            <h5 class="pro d-flex">
+              <i class="ri-arrow-right-up-line"></i>
+              +61.24%
+            </h5>
+          </div>
+        </div>
+        <div class="pro_content d-flex justify-between align-end">
+          <div class="pro_subdsc">
+            <div class="pro_amt">
+              <h4>
+                $
+                <span class="pro_number"> 559.25 </span>
+                k
+              </h4>
+            </div>
+            <a href="">View net earnings</a>
+          </div>
+          <div class="pro_footer d-flex">
+            <span class="pro_icon_2">
+              <i class="ri-money-dollar-circle-line"></i>
+            </span>
+          </div>
+        </div>
+      </div>
+      <!--Order-->
+      <div class="pro_dsc">
+        <div class="d-flex">
+          <div class="earnings">
+            <p>Orders</p>
+          </div>
+          <div class="pro_icon_1">
+            <h5 class="order">
+              <i class="ri-arrow-right-down-line"></i>
+              -3.57%
+            </h5>
+          </div>
+        </div>
+        <div class="pro_content d-flex justify-between align-end">
+          <div class="pro_subdsc">
+            <div class="pro_amt">
+              <h4>
+                <span class="pro_number"> 36,894 </span>
+              </h4>
+            </div>
+            <a href="">View all orders</a>
+          </div>
+          <div class="pro_footer">
+            <span class="pro_icon_3">
+              <i class="ri-shopping-bag-line"></i>
+            </span>
+          </div>
+        </div>
+      </div>
+      <!--Customer-->
+      <div class="pro_dsc">
+        <div class="d-flex">
+          <div class="earnings">
+            <p>Customers</p>
+          </div>
+          <div class="pro_icon_1">
+            <h5 class="pro">
+              <i class="ri-arrow-right-up-line"></i>
+              +29.08%
+            </h5>
+          </div>
+        </div>
+        <div class="pro_content d-flex justify-between align-end">
+          <div class="pro_subdsc">
+            <div class="pro_amt">
+              <h4>
+                <span class="pro_number"> 183.35 </span>
+                M
+              </h4>
+            </div>
+            <a href="">See details</a>
+          </div>
+          <div class="pro_footer">
+            <span class="pro_icon_4">
+              <i class="ri-account-circle-fill"></i>
+            </span>
+          </div>
+        </div>
+      </div>
+      <!--Balance-->
+      <div class="pro_dsc">
+        <div class="d-flex">
+          <div class="earnings">
+            <p>My Balance</p>
+          </div>
+          <div class="pro_icon_1">
+            <h5 class="balance">+0.00%</h5>
+          </div>
+        </div>
+        <div class="pro_content d-flex justify-between align-end">
+          <div class="pro_subdsc">
+            <div class="pro_amt">
+              <h4>
+                $
+                <span class="pro_number"> 165.85 </span>
+                k
+              </h4>
+            </div>
+            <a href="">Withdraw money</a>
+          </div>
+          <div class="pro_footer">
+            <span class="pro_icon_5">
+              <i class="ri-wallet-line"></i>
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <!--Chart-->
+      <div class="pro_dsc">
+        <div class="revenue">
+          <div class="border">
+            <p class="d-inline-block">Revenue</p>
+            <div class="revenue-btn f-right">
+              <button class="btn">All</button>
+              <button class="btn">1M</button>
+              <button class="btn">6M</button>
+              <button class="btn">1Y</button>
+            </div>
+          </div>
+          <div class="revenue-head">
+            <div class="revenue-subhead row d-flex f-wrap align-center text-center">
+              <div class="w-3">
+                <a href="" class="r-counter"><span id="r-counter1" class="d-block">7358</span>Orders</a>
+              </div>
+              <div class="w-3">
+                <a href="" class="r-counter">$<span id="r-counter2">22.89</span>k <span
+                    class="d-block">Earnings</span></a>
+              </div>
+              <div class="w-3">
+                <a href="" class="r-counter"><span id="r-counter3" class="d-block">369</span> Refunds</a>
+              </div>
+              <div class="w-3">
+                <a href="" class="r-counter"><span id="r-counter4">18.92</span>% <span class="d-block">Conversation
+                    Ratio</span></a>
+              </div>
+            </div>
+          </div>
+          <div class="r-chart" id="r-mixed-chart"></div>
+        </div>
+      </div>
+      <!--graph -->
+      <div class="pro_dsc">
+        <div class="sales">
+          <div class="border">
+            <p class="d-inline-block">Sales by Location</p>
+            <a href=""><button class="map_btn f-right">Export Report</button></a>
+          </div>
+          <div id="chartdiv"></div>
+          <div class="chart-progress">
+            <p class="d-inline-block">Canada
+            </p>
+            <span class="f-right">75%</span>
+            <div class="progress">
+              <div class="progress-bar-75"></div>
+              <p class="d-inline-block">Greenland</p>
+              <span class="f-right">47%</span>
+              <div class="progress">
+                <div class="progress-bar-47"></div>
+              </div>
+              <p class="d-inline-block">Russia</p>
+              <span class="f-right">82%</span>
+              <div class="progress">
+                <div class="progress-bar-82"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Best-Selling -->
+
+      <div class="pro_dsc1">
+        <div class="best-selling">
+          <div class="border">
+            <p class="d-inline-block">Best Selling Products</p>
+            <a href="javascript:void(0);" class="nav-link"><span class="f-right">SORT BY: <span
+                  class="days">Today</span>
+                <i class="ri-arrow-down-s-line"></i>
+                <div class="menu-dropdown5 d-none">
+                  <a href="javascript:void(0);" class="down d-block">Yesterday</a>
+                  <a href="javascript:void(0);" class="down d-block">Last 7 Days</a>
+                  <a href="javascript:void(0);" class="down d-block">Last 30 Days</a>
+                  <a href="javascript:void(0);" class="down d-block">This Month</a>
+                  <a href="javascript:void(0);" class="down d-block">Last Month</a>
+                </div>
+              </span>
+            </a>
+          </div>
+          <div class="table-body">
+            <table>
+              <tbody>
+                <tr class="best-selling-cart">
+                  <td>
+                    <div class="d-flex f-wrap align-center">
+                      <div class="best-selling-cart-img">
+                        <img src="asset/images/bs-1.png" alt="" />
+                      </div>
+                      <h5>
+                        <p class="cart-product">Branded T-shirt</p>
+                        <span>24-Apr-2021</span>
+                      </h5>
+                    </div>
+                  </td>
+                  <td>
+                    <h5>$29.00</h5>
+                    <span>Price</span>
+                  </td>
+                  <td>
+                    <h5>62</h5>
+                    <span>Orders</span>
+                  </td>
+                  <td>
+                    <h5>510</h5>
+                    <span>Stock</span>
+                  </td>
+                  <td>
+                    <h5>$1,789</h5>
+                    <span>Amount</span>
+                  </td>
+                </tr>
+                <tr class="best-selling-cart">
+                  <td>
+                    <div class="d-flex align-center f-wrap">
+                      <div class="best-selling-cart-img">
+                        <img src="asset/images/bs-2.png" alt="" />
+                      </div>
+                      <h5 class="cart-product">
+                        <p>Bentwood Chair</p>
+                        <span>19-Mar-2021</span>
+                      </h5>
+                    </div>
+                  </td>
+                  <td>
+                    <h5>$85.20</h5>
+                    <span>Price</span>
+                  </td>
+                  <td>
+                    <h5>35</h5>
+                    <span>Orders</span>
+                  </td>
+                  <td>
+                    <h5 class="out-stock">Out of Stock</h5>
+                    <span>Stock</span>
+                  </td>
+                  <td>
+                    <h5>$2982</h5>
+                    <span>Amount</span>
+                  </td>
+                </tr>
+                <tr class="best-selling-cart">
+                  <td>
+                    <div class="d-flex align-center f-wrap">
+                      <div class="best-selling-cart-img">
+                        <img src="asset/images/bs-3.png" alt="" />
+                      </div>
+                      <h5 class="cart-product">
+                        <p>Borocil PaperCup</p>
+                        <span>19-Mar-2021</span>
+                      </h5>
+                    </div>
+                  </td>
+                  <td>
+                    <h5>$14.00</h5>
+                    <span>Price</span>
+                  </td>
+                  <td>
+                    <h5>80</h5>
+                    <span>Orders</span>
+                  </td>
+                  <td>
+                    <h5>749</h5>
+                    <span>Stock</span>
+                  </td>
+                  <td>
+                    <h5>$1120</h5>
+                    <span>Amount</span>
+                  </td>
+                </tr>
+                <tr class="best-selling-cart">
+                  <td>
+                    <div class="d-flex align-center f-wrap">
+                      <div class="best-selling-cart-img">
+                        <img src="asset/images/bs-4.png" alt="" />
+                      </div>
+                      <h5 class="cart-product">
+                        <p>One Seater Sofa</p>
+                        <span>11-Feb-2021</span>
+                      </h5>
+                    </div>
+                  </td>
+                  <td>
+                    <h5>$127.50</h5>
+                    <span>Price</span>
+                  </td>
+                  <td>
+                    <h5>56</h5>
+                    <span>Orders</span>
+                  </td>
+                  <td>
+                    <h5 class="out-stock">Out of Stock</h5>
+                    <span>Stock</span>
+                  </td>
+                  <td>
+                    <h5>$7140</h5>
+                    <span>Amount</span>
+                  </td>
+                </tr>
+                <tr class="best-selling-cart">
+                  <td>
+                    <div class="d-flex align-center f-wrap">
+                      <div class="best-selling-cart-img">
+                        <img src="asset/images/bs-5.png" alt="" />
+                      </div>
+                      <h5 class="cart-product">
+                        <p>Stillbird Helmet</p>
+                        <span>17-Jan-2021</span>
+                      </h5>
+                    </div>
+                  </td>
+                  <td>
+                    <h5>$54.00</h5>
+                    <span>Price</span>
+                  </td>
+                  <td>
+                    <h5>74</h5>
+                    <span>Orders</span>
+                  </td>
+                  <td>
+                    <h5>805</h5>
+                    <span>Stock</span>
+                  </td>
+                  <td>
+                    <h5>$3996</h5>
+                    <span>Amount</span>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="best-selling-bottom">
+            <span>showing</span>
+            <span class="bold">5</span>
+            <span>of</span>
+            <span class="bold">25</span>
+            <span>Results</span>
+            <div class="pagination d-inline-block f-right">
+              <a href="javascript:void(0);" class="pagin">&laquo;</a>
+              <a href="javascript:void(0);" class="pagin">1</a>
+              <a href="javascript:void(0);" class="pagin-active">2</a>
+              <a href="javascript:void(0);" class="pagin">3</a>
+              <a href="javascript:void(0);" class="pagin">&raquo;</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Top-Sellers -->
+      <div class="pro_dsc2">
+        <div class="top-sellers">
+          <div class="border">
+            <p class="d-inline-block">Top-Sellers</p>
+            <a href="javascript:void(0);"><span class="nav-link f-right">Report <i class="ri-arrow-down-s-line"></i>
+                <div class="menu-dropdown6 d-none">
+                  <a href="javascript:void(0);" class="down d-block">Download Report</a>
+                  <a href="javascript:void(0);" class="down d-block">Export</a>
+                  <a href="javascript:void(0);" class="down d-block">Import</a>
+                </div>
+              </span>
+            </a>
+          </div>
+          <div class="table-body">
+            <table>
+              <tbody>
+                <tr class="top-sellers-cart">
+                  <td>
+                    <div class="d-flex f-wrap align-center">
+                      <div class="top-sellers-cart-img ">
+                        <img src="asset/images/ts-1.png" alt="">
+                      </div>
+                      <h5>
+                        <p class="top-seller-product">iTest Factory</p><span>Oliver Tyler</span>
+                      </h5>
+                    </div>
+                  </td>
+                  <td><span>Bags & Wallets</span></td>
+                  <td>
+                    <h5>8547</h5>
+                    <span>Stock</span>
+                  </td>
+                  <td>
+                    <h5>$541200</h5>
+                    <span>Orders</span>
+                  </td>
+                  <td>
+                    <h5>32%</h5>
+                  </td>
+                  <td> <span><i class="ri-bar-chart-fill"></i></span></td>
+                </tr>
+                <tr class="top-sellers-cart">
+                  <td>
+                    <div class="d-flex f-wrap align-center">
+                      <div class="top-sellers-cart-img ">
+                        <img src="asset/images/ts-2.png" alt="">
+                      </div>
+                      <h5>
+                        <p class="top-seller-product">Digitech Galaxy</p><span>John Roberts</span>
+                      </h5>
+                    </div>
+                  </td>
+                  <td><span>Watches</span></td>
+                  <td>
+                    <h5>895</h5>
+                    <span>Stock</span>
+                  </td>
+                  <td>
+                    <h5>$75030</h5>
+                    <span>Orders</span>
+                  </td>
+                  <td>
+                    <h5>79%</h5>
+                  </td>
+                  <td> <span><i class="ri-bar-chart-fill"></i></span></td>
+                </tr>
+                <tr class="top-sellers-cart">
+                  <td>
+                    <div class="d-flex f-wrap align-center">
+                      <div class="top-sellers-cart-img ">
+                        <img src="asset/images/ts-3.png" alt="">
+                      </div>
+                      <h5>
+                        <p class="top-seller-product">Nesta Techno.</p><span>Harley Fuller</span>
+                      </h5>
+                    </div>
+                  </td>
+                  <td><span>Bike Accessories</span></td>
+                  <td>
+                    <h5>3470</h5>
+                    <span>Stock</span>
+                  </td>
+                  <td>
+                    <h5>$45600</h5>
+                    <span>Orders</span>
+                  </td>
+                  <td>
+                    <h5>90%</h5>
+                  </td>
+                  <td><span><i class="ri-bar-chart-fill"></i></span></td>
+                </tr>
+                <tr class="top-sellers-cart">
+                  <td>
+                    <div class="d-flex f-wrap align-center">
+                      <div class="top-sellers-cart-img ">
+                        <img src="asset/images/ts-4.png" alt="">
+                      </div>
+                      <h5>
+                        <p class="top-seller-product">Zoetic Fashion</p><span>James Bowen</span>
+                      </h5>
+                    </div>
+                  </td>
+                  <td><span>Clothes</span></td>
+                  <td>
+                    <h5>5488</h5>
+                    <span>Stock</span>
+                  </td>
+                  <td>
+                    <h5>$29456</h5>
+                    <span>Orders</span>
+                  </td>
+                  <td>
+                    <h5>40%</h5>
+                  </td>
+                  <td><span><i class="ri-bar-chart-fill"></i></span></td>
+                </tr>
+                <tr class="top-sellers-cart">
+                  <td>
+                    <div class="d-flex f-wrap align-center">
+                      <div class="top-sellers-cart-img ">
+                        <img src="asset/images/ts-5.png" alt="">
+                      </div>
+                      <h5>
+                        <p class="top-seller-product">Meta4Systems</p><span>Zoe Dennis</span>
+                      </h5>
+                    </div>
+                  </td>
+                  <td><span>Furniture</span></td>
+                  <td>
+                    <h5>4100</h5>
+                    <span>Stock</span>
+                  </td>
+                  <td>
+                    <h5>$11260</h5>
+                    <span>Orders</span>
+                  </td>
+                  <td>
+                    <h5>57%</h5>
+                  </td>
+                  <td> <span><i class="ri-bar-chart-fill"></i></span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="top-sellers-bottom">
+            <span>showing</span>
+            <span class="bold">5</span>
+            <span>of</span>
+            <span class="bold">25</span>
+            <span>Results</span>
+            <div class="pagination d-inline-block f-right">
+              <a href="javascript:void(0);" class="pagin">&laquo;</a>
+              <a href="javascript:void(0);" class="pagin">1</a>
+              <a href="javascript:void(0);" class="pagin-active">2</a>
+              <a href="javascript:void(0);" class="pagin">3</a>
+              <a href="javascript:void(0);" class="pagin">&raquo;</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="reports d-flex f-col ">
+        <div class="border">
+          <p class="d-inline-block">Store Visit by Sources</p>
+          <a href="javascript:void(0);"><span class="nav-link f-right">Report <i class="ri-arrow-down-s-line"></i>
+              <div class="menu-dropdown4 d-none">
+                <a href="javascript:void(0);" class="down d-block">Download Report</a>
+                <a href="javascript:void(0);" class="down d-block">Import</a>
+                <a href="javascript:void(0);" class="down d-block">Export</a>
+              </div>
+            </span>
+          </a>
+        </div>
+        <div class="charts  " id="reports"></div>
+      </div>
+      <div class="recent-orders">
+        <div class="border">
+          <p class="d-inline-block">Recent-Orders</p>
+          <a href="javascript:void(0);" class="f-right btn"><i class="ri-file-list-3-line"></i>Generate Report</a>
+        </div>
+        <div class="table-body">
+          <table>
+            <thead>
+              <tr>
+                <th>Order Id</th>
+                <th>Customer</th>
+                <th>Product</th>
+                <th>Amount</th>
+                <th>Vendor</th>
+                <th>Status</th>
+                <th>Rating</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><a href="" class="id"> #VZ2112</a></td>
+                <td>
+                  <div class="d-flex f-wrap align-center">
+                    <div class="recent-orders-img ">
+                      <img src="asset/images/ro-1.jpg" alt="">
+                    </div>
+                    <div class="recent-orders-users">Alex Smith</div>
+                  </div>
+                </td>
+                <td>Clothes</td>
+                <td class="recent-orders-amt">$109</td>
+                <td>Zoitic Fashion</td>
+                <td><span class="paid">paid</span></td>
+                <td>5.0 <span>(61 votes)</span></td>
+              </tr>
+              <tr>
+                <td><a href="" class="id"> #VZ2111</a></td>
+                <td>
+                  <div class="d-flex f-wrap align-item-center">
+                    <div class="recent-orders-img ">
+                      <img src="asset/images/ro-2.jpg" alt="">
+                    </div>
+                    <div class="recent-orders-users">Jansh Brown</div>
+                  </div>
+                </td>
+                <td>Kitchen Storage</td>
+                <td class="recent-orders-amt">$149.00</td>
+                <td>Micro Design</td>
+                <td><span class="pending">Pending</span></td>
+                <td>4.5 <span>(61 votes)</span></td>
+              </tr>
+              <tr>
+                <td><a href="" class="id"> #VZ2109</a></td>
+                <td>
+                  <div class="d-flex f-wrap align-center">
+                    <div class="recent-orders-img ">
+                      <img src="asset/images/ro-3.jpg" alt="">
+                    </div>
+                    <div class="recent-orders-users">Ayaan Bowen</div>
+                  </div>
+                </td>
+                <td>Bike Accessories</td>
+                <td class="recent-orders-amt">$215.00</td>
+                <td>Nesta Technology</td>
+                <td><span class="paid">Paid</span></td>
+                <td>4.9 <span>(89 votes)</span></td>
+              </tr>
+              <tr>
+                <td><a href="" class="id"> #VZ2108</a></td>
+                <td>
+                  <div class="d-flex f-wrap align-center">
+                    <div class="recent-orders-img ">
+                      <img src="asset/images/ro-4.jpg" alt="">
+                    </div>
+                    <div class="recent-orders-users">Prezy Mark</div>
+                  </div>
+                </td>
+                <td>Furniture</td>
+                <td class="recent-orders-amt">$199.00</td>
+                <td>Syntyce Solutions</td>
+                <td><span class="unpaid">Unpaid</span></td>
+                <td>4.3 <span>(47 votes)</span></td>
+              </tr>
+              <tr>
+                <td><a href="" class="id"> #VZ2107</a></td>
+                <td>
+                  <div class="d-flex f-wrap align-item-center">
+                    <div class="recent-orders-img">
+                      <img src="asset/images/ro-5.jpg" alt="">
+                    </div>
+                    <div class="recent-orders-users">Vihan Hudda</div>
+                  </div>
+                </td>
+                <td>Bags and Wallets</td>
+                <td class="recent-orders-amt">$330.00</td>
+                <td>iTest Factory</td>
+                <td><span class="paid">Paid</span></td>
+                <td>4.7 <span>(161 votes)</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- footer -->
+  <footer class="footer d-flex align-center justify-between">
+    <div class="f-left">
+      2023 @ Velzon
+    </div>
+    <div class="f-right">
+      <p>Design & Develop by Themesbrand</p>
+    </div>
+  </footer>
+
+  <!-- top-btn -->
+  <div class="top-btn">
+    <button class="btn" id="button"><i class="ri-arrow-up-line"></i></button>
+  </div>
+
+  <!-- close aside  -->
+  <div class="close">
+    <button class="btn" id="button"><i class="fa-solid fa-xmark"></i></button>
+  </div>
+
+  <!-- settings -->
+  <div class="setting-btn">
+    <button class="btn"><i class="fa-solid fa-gear"></i></button>
+  </div>
+
+
+
+  <!-- JQuery CDN -->
+  <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+    crossorigin="anonymous"></script>
+  <!-- Main JS -->
+  <script src="asset/js/main.js"></script>
+  <!-- ApexChart JS -->
+  <script src="asset/js/apexchart.js"></script>
+  <script src="asset/js/chart.js"></script>
+  <!-- Counter JS -->
+  <script src="asset/js/counter.js"></script>
+  <!-- Map JS -->
+  <script src="asset/js/map.js"></script>
+</body>
+
+</html>
