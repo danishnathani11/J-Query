@@ -1,0 +1,23 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+.container{
+    max-width:1320px;
+    margin:0 auto;
+}
+
+.t-card{
+    padding: 20px;
+    font-size:20px;
+    font-family:cursive;
+    border:1px solid black;
+    background-color: darkslategrey;
+    color:white;
+}
+
+.slide1{
+    padding:0 20px;
+}

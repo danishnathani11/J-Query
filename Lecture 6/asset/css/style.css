@@ -1,0 +1,55 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+.container{
+    max-width:1320px;
+    margin: 0 auto;
+}
+
+h1{
+    font-size:40px;
+    color: teal;
+    text-align: center;
+    padding:80px 0;
+}
+
+p{
+    font-size:25px;
+    color:steelblue;
+    text-align: center;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+/* headline css */
+
+#changingText {
+    color: #ffd166;
+    border-right: 1px solid black;
+    animation: cursoranim 1s linear infinite;
+  }
+
+  /* pointer js */
+
+  h2{
+    font-size:40px;
+    color: teal;
+    text-align: center;
+    padding:80px 0;
+}
+  .container {
+    width: 100%;
+    min-height: 100vh;
+    background-image: url("https://assets.codepen.io/10689251/disney.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0.5;
+    cursor: none;
+  }
+  

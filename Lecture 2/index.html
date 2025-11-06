@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse And Keyboard Events</title>
+    <!-- css -->
+    <link rel="stylesheet" href="asset/css/style.css">
+</head>
+<body>
+   
+    <section class="mouse_event py-100">
+    <div class="container">
+        <div class="row">
+            <div class="w-4">
+                <div class="card">
+                    <div class="c_img">
+                        <img src="https://i.pinimg.com/564x/56/23/35/56233512ab0a640f2763798718629dd3.jpg" class="img1">
+                    </div>
+                    <h2 class="head1">Heading</h2>
+                    <p class="dsc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, ipsum! Dolorem nihil adipisci cum, harum dignissimos atque praesentium saepe assumenda veniam quibusdam ullam soluta facilis. Earum sequi nihil maiores reiciendis?
+                    </p>
+                    <button class="btn1">Click/Hide</button>
+                    <button class="btn2">DblClick/Show</button>
+                    <button class="btn3">Toggle</button>
+                    <button class="hi1">Change Image</button>
+                    <input type="text" id="in1">
+                </div>
+            </div>
+
+            <div class="w-4">
+                <div class="card">
+                    <div class="c_img">
+                        <img src="https://i.pinimg.com/564x/56/23/35/56233512ab0a640f2763798718629dd3.jpg" class="img2">
+                    </div>
+                    <h2 class="head2">Heading</h2>
+                    <p class="dsc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, ipsum! Dolorem nihil adipisci cum, harum dignissimos atque praesentium saepe assumenda veniam quibusdam ullam soluta facilis. Earum sequi nihil maiores reiciendis?
+                    </p>
+                    <button class="btn4">Mouseenter/Hide</button>
+                    <button class="btn5">Mouseleave/Show</button>
+                    <button class="btn6">Toggle</button>
+                    <button class="hi2">Change Image</button>
+                    <input type="text" id="in2">
+                </div>
+            </div>
+
+            <div class="w-4">
+                <div class="card">
+                    <div class="c_img">
+                        <img src="https://i.pinimg.com/564x/56/23/35/56233512ab0a640f2763798718629dd3.jpg" class="img3">
+                    </div>
+                    <h2 class="head3">Heading</h2>
+                    <p class="dsc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, ipsum! Dolorem nihil adipisci cum, harum dignissimos atque praesentium saepe assumenda veniam quibusdam ullam soluta facilis. Earum sequi nihil maiores reiciendis?
+                    </p>
+                    <button class="btn7">Mousemove/Hide</button>
+                    <button class="btn8">Hover/Show</button>
+                    <button class="btn9">Toggle</button>
+                    <button class="hi3">Change Image</button>
+                    <input type="text" id="in3">
+                </div>
+            </div>
+        </div>     
+    </div>
+</section>
+
+    <!-- JQuery -->
+    <script src="asset/jq/jquery-3.7.1.min.js"></script>
+
+
+    <script>
+    $(document).ready(function(){
+        $('.btn1').click(function(){
+       $('.head1').hide(1000); 
+        });
+
+        $('.btn2').dblclick(function(){
+            $('.head1').show(1000);
+        });
+
+        $('.btn4').mouseenter(function(){
+            $('.head2').hide(1000);
+        });
+
+        $('.btn5').mouseleave(function(){
+            $('.head2').show(1000);
+        });
+
+        $('.btn7').mousemove(function(){
+            $('.head3').hide(1000);
+        });
+
+        $('.btn8').hover(function(){
+            $('.head3').show(1000);
+        });
+
+        $('.btn3,.btn6,.btn9').click(function(){
+            $('.head1,.head2,.head3').toggle(1000)
+        });
+
+        $('#in1').keypress(function(){
+            $('#in1').css('background-color', 'mediumpurple')
+        });
+
+        $('#in2').keyup(function(){
+            $('#in2').css('background-color', 'lightblue')
+        });
+
+        $('#in3').keydown(function(){
+            $('#in3').css('background-color', 'lightgrey')
+        });
+
+        $('.hi1').click(function(){
+            $('.img1').attr('src','https://i.pinimg.com/736x/30/f5/e6/30f5e67ee798417a441469f8da37e6a6.jpg');
+        });
+
+        $('.hi2').click(function(){
+            $('.img2').attr('src','https://i.pinimg.com/564x/c3/1c/27/c31c277453eee7abd9458ebd479c202f.jpg');
+        });
+
+        $('.hi3').click(function(){
+            $('.img3').attr('src','https://i.pinimg.com/564x/a7/30/c5/a730c5ee1fe3eb98884e12882dee9f39.jpg');
+        });
+    });
+    </script>
+</body>
+</html>

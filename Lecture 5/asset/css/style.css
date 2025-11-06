@@ -1,0 +1,166 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .container {
+    max-width: 1320px;
+    margin: 0 auto;
+  }
+  
+  /* Root */
+
+  :root {
+    --font: 'Marcellus';
+    --font1: 'Open Sans SemiCondensed';
+    --white: #ffffff;
+    --black: #000000;
+    --pink: #ef2853;
+    --grey: #656565;
+    --lightgrey: #262626;
+    --coffee: #be9c79;
+    --gutter-width: 12px;
+  }
+
+  /* Utility Class */
+  
+  .w-1 {
+    width: 8.33%;
+    padding: 0 var(--gutter-width);
+  }
+  
+  .w-2 {
+    width: 16.66%;
+    padding: 0 var(--gutter-width);
+  }
+  
+  .w-3 {
+    width: 25%;
+    padding: 0 var(--gutter-width);
+  }
+  
+  .w-4 {
+    width: 33.33%;
+    padding: 0 var(--gutter-width);
+  }
+  
+  .w-5 {
+    width: 41.66%;
+    padding: 0 var(--gutter-width);
+  }
+  
+  .w-6 {
+    width: 50%;
+    padding: 0 var(--gutter-width);
+  }
+  
+  .w-7 {
+    width: 58.33%;
+    padding: 0 var(--gutter-width);
+  }
+  
+  .w-8 {
+    width: 66.66%;
+    padding: 0 var(--gutter-width);
+  }
+  
+  .w-9 {
+    width: 75%;
+    padding: 0 var(--gutter-width);
+  }
+  
+  .w-10 {
+    width: 83.33%;
+    padding: 0 var(--gutter-width);
+  }
+  
+  .w-11 {
+    width: 91.66%;
+    padding: 0 var(--gutter-width);
+  }
+  
+  .w-12 {
+    width: 100%;
+    padding: 0 var(--gutter-width);
+  }
+  
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .py-100 {
+    padding: 100px 0;
+  }
+
+  .text-center{
+    text-align:center;
+  }
+
+  /* Counter Start */
+
+  .counter{
+    position:relative;
+    padding:220px 0;
+  }
+
+  .c-card{
+    box-shadow: 0px 0px 5px 7px #3e5c76;
+  }
+
+.counter h2{
+  font-size:40px;
+  font-family: var(--font);
+  margin-bottom: 80px;
+  font-weight: 500;
+  color:#c2c5aa;
+}
+
+.counter .icon{
+  font-size:80px;
+  margin-bottom: 10px;
+  padding-top: 20px;
+  color:#6c584c;
+}
+
+.counter span {
+  font-size: 57px;
+  font-family: var(--font);
+  color:#7f5539;
+  
+}
+
+.counter h5 {
+  font-size: 23px;
+  font-family: var(--font);
+  text-transform: uppercase;
+  margin: 10px;
+  color:#b08968 ;
+  font-weight: 500;
+}
+
+.counter .c_dsc {
+  font-family: var(--font1);
+  font-size: 15px;
+  line-height: 26px;
+  font-weight: 300;
+  color:#bb9457;
+  overflow: hidden;
+  line-height: 1.5;
+  letter-spacing: 1.2px;
+  word-spacing: 2px;
+  padding-bottom: 20px;
+}
+
+/* Particles */
+
+#particles-js {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #000000;
+}
+
+
+  
